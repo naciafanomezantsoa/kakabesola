@@ -1,0 +1,115 @@
+import { DateActivity, DatePlan } from '../types';
+
+export const OFFICIAL_ACTIVITIES: DateActivity[] = [
+  {
+    id: 'plan_kaly',
+    name: 'plan kaly 🍜',
+    emoji: '🍜',
+    description: 'Bons petits plats cuisinés ensemble, commande gourmande ou street-food savoureuse.',
+    category: 'food',
+  },
+  {
+    id: 'dormir',
+    name: 'dormir',
+    emoji: '😴',
+    description: 'Sieste complice dans les bras l’un de l’autre, réveil tout en douceur.',
+    category: 'rest',
+  },
+  {
+    id: 'regarder_film',
+    name: 'regarder un film',
+    emoji: '🎬',
+    description: 'Plaid douillet, popcorn croustillant et marathon cinéma romantique ou comédie.',
+    category: 'fun',
+  },
+  {
+    id: 'beelly',
+    name: 'béelly 👙',
+    emoji: '👙',
+    description: 'Petite tenue ravissante, ambiance tamisée et jeu de séduction irrésistible.',
+    category: 'intimate',
+  },
+  {
+    id: 'suche_couche',
+    name: 'suche 🤤 + couche',
+    emoji: '🤤',
+    description: 'Moments intimes passionnés, bisous gourmands et tendresse absolue au lit.',
+    category: 'intimate',
+  },
+  {
+    id: 'musique_jouer',
+    name: '🎵 écouter de la musique + jouer',
+    emoji: '🎵',
+    description: 'Nos morceaux préférés, danses improvisées dans le salon et petits jeux coquins ou complices.',
+    category: 'fun',
+  },
+  {
+    id: 'instagram_reels',
+    name: 'Instagram Reels',
+    emoji: '📱',
+    description: 'Rigoler sous la couette en s’envoyant des vidéos drôles et des memes de couple.',
+    category: 'fun',
+  },
+  {
+    id: 'dormir_sans_main',
+    name: 'dormir sans main',
+    emoji: '🤫',
+    description: 'Le pacte secret : dormir collés-serrés... sans dépasser les limites (si on y arrive !).',
+    category: 'intimate',
+  },
+];
+
+export const INITIAL_PLANS: DatePlan[] = [
+  {
+    id: 'date-seed-1',
+    createdAt: '2026-09-18T20:15:00.000Z',
+    proposer: 'Charobidy',
+    respondent: 'Nacia',
+    date: '2026-09-20',
+    time: '20:00',
+    activities: [
+      'plan kaly 🍜',
+      'regarder un film',
+      'dormir',
+    ],
+    specialNote: 'Notre soirée soupe et série doudou, tu étais tellement mignonne.',
+    dodgeCount: 3,
+    status: 'terminé',
+    place: 'Au chaud à la maison',
+  },
+  {
+    id: 'date-seed-2',
+    createdAt: '2026-09-22T14:30:00.000Z',
+    proposer: 'Nacia',
+    respondent: 'Charobidy',
+    date: '2026-09-26',
+    time: '21:00',
+    activities: [
+      'plan kaly 🍜',
+      'béelly 👙',
+      'suche 🤤 + couche',
+      'dormir sans main',
+    ],
+    specialNote: 'Prépare-toi pour une soirée magique mon baeko d’amour ❤️ Muaaaah eb ! 😘💋✨',
+    dodgeCount: 6,
+    status: 'confirmé',
+    place: 'Chambre aux chandelles',
+  },
+];
+
+export const REFUSAL_MESSAGES: string[] = [
+  'Pas question...',
+  'Réfléchis bien !',
+  'Trop timide...',
+  'Tu es vraiment sûre ? 🥺',
+  'Oups, raté ! 😜',
+  'Impossible de refuser mon cœur !',
+  'Ce bouton a glissé !',
+  'Mauvais bouton hihi...',
+  'Je sais que tu veux dire OUI ❤️',
+  'Erreur 404 : Le NON n\'existe pas !',
+  'Encore un petit effort... dis OUI !',
+  'Mon amour t\'attend juste à côté !',
+  'Tu ne m\'échapperas pas 💕',
+  'Allez baeko, clique sur le gros OUI !',
+];

@@ -1,0 +1,6 @@
+{
+  "name": "Charobidy baeko - Rendez-vous d'Amour",
+  "description": "Application romantique et intime pour couple permettant de planifier des rendez-vous complices, esquiver les refus et conserver des souvenirs précieux.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

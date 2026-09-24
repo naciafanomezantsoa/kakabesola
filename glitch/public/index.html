@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Charobidy baeko - Rendez-vous d'Amour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- EN-TÊTE PRINCIPAL : Charobidy baeko -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="heart-icon">💖</span>
+        <span class="brand-name">Charobidy baeko</span>
+      </div>
+
+      <nav class="nav-links">
+        <button id="nav-btn-proposal" class="nav-btn active">Invitation</button>
+        <button id="nav-btn-planner" class="nav-btn">Planifier</button>
+        <button id="nav-btn-letter" class="nav-btn" style="display: none;">Lettre</button>
+        <button id="nav-btn-dashboard" class="nav-btn">Tableau de bord</button>
+      </nav>
+
+      <div class="user-pill" id="user-pill" title="Changer d'utilisateur">
+        <span class="pill-dot"></span>
+        <span id="current-user-label">Nacia</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- 1. PAGE D'ACCUEIL / INVITATION -->
+    <section id="view-proposal" class="view active">
+      <div class="card proposal-card">
+        <div class="badge">🌸 Rendez-vous complice</div>
+        
+        <h1 class="main-title">Charobidy &amp; Nacia</h1>
+        <p class="subtitle">« Parce qu’aucun instant n'est plus doux que celui passé dans tes bras. »</p>
+
+        <!-- Identification du couple -->
+        <div class="identity-box">
+          <label class="identity-label">Qui es-tu actuellement ?</label>
+          <div class="identity-toggle">
+            <button type="button" class="person-btn active" id="btn-select-nacia">
+              <span class="avatar">🌸</span>
+              <span class="name">Nacia</span>
+            </button>
+            <button type="button" class="person-btn" id="btn-select-charobidy">
+              <span class="avatar">👑</span>
+              <span class="name">Charobidy</span>
+            </button>
+          </div>
+          <p class="identity-hint" id="identity-hint">Charobidy invite Nacia</p>
+        </div>
+
+        <!-- Question d'Amour -->
+        <div class="question-container">
+          <h2 class="love-question" id="love-question">Veux-tu sortir avec moi ?</h2>
+          <div id="dodge-alert" class="dodge-alert" style="display: none;">
+            Refus esquivé <span id="dodge-count-display">0</span> fois ! Impossible de me fuir 😉
+          </div>
+        </div>
+
+        <!-- Zone des boutons OUI / NON -->
+        <div class="actions-playground" id="actions-playground">
+          <button type="button" id="btn-yes" class="btn-yes">
+            <span>OUI ! ❤️</span>
+          </button>
+
+          <button type="button" id="btn-no" class="btn-no">
+            Non...
+          </button>
+        </div>
+
+        <p class="footer-note">Le bouton de refus est programmé pour n'accepter que l'amour sincère.</p>
+      </div>
+    </section>
+
+    <!-- 2. PAGE DE PLANIFICATION -->
+    <section id="view-planner" class="view">
+      <div class="card planner-card">
+        <div class="badge">✨ Nouveau Rendez-vous</div>
+        <h2 class="card-title">Prépare notre moment doux</h2>
+        <p class="subtitle" id="planner-subtitle">Personnalise notre prochaine sortie à deux.</p>
+
+        <form id="date-form" class="date-form">
+          
+          <!-- Date et Heure -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date-input">📅 Choisis la date :</label>
+              <input type="date" id="date-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="time-input">⏰ Choisis l'heure :</label>
+              <input type="time" id="time-input" value="19:30" required>
+            </div>
+          </div>
+
+          <!-- Options cumulables (Exactes) -->
+          <div class="form-group">
+            <label class="section-label">💕 Ce qu'on va faire ensemble (cumulables) :</label>
+            <p class="sub-label">Sélectionne toutes les options que tu veux partager :</p>
+            
+            <div class="options-grid" id="options-grid">
+              <button type="button" class="opt-btn" data-opt="plan kaly 🍜">
+                <span class="opt-name">plan kaly 🍜</span>
+              </button>
+              <button type="button" class="opt-btn" data-opt="dormir">
+                <span class="opt-name">dormir 🛌</span>
+              </button>
+              <button type="button" class="opt-btn" data-opt="regarder un film">
+                <span class="opt-name">regarder un film 🎬</span>
+              </button>
+              <button type="button" class="opt-btn" data-opt="béelly 👙">
+                <span class="opt-name">béelly 👙</span>
+              </button>
+              <button type="button" class="opt-btn" data-opt="suche 🤤 + couche">
+                <span class="opt-name">suche 🤤 + couche</span>
+              </button>
+              <button type="button" class="opt-btn" data-opt="🎵 écouter de la musique + jouer">
+                <span class="opt-name">🎵 écouter de la musique + jouer</span>
+              </button>
+              <button type="button" class="opt-btn" data-opt="Instagram Reels">
+                <span class="opt-name">Instagram Reels 📱</span>
+              </button>
+              <button type="button" class="opt-btn" data-opt="dormir sans main">
+                <span class="opt-name">dormir sans main 💤</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Note spéciale -->
+          <div class="form-group">
+            <label for="special-note">💌 Un mot doux ou une envie particulière ?</label>
+            <textarea id="special-note" rows="2" placeholder="Ex: Apporte mes bonbons préférés..."></textarea>
+          </div>
+
+          <!-- Validation -->
+          <button type="submit" class="btn-submit" id="btn-submit-plan">
+            Sceller ce rendez-vous 💖
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 3. PAGE FINALE : LA LETTRE D'AMOUR -->
+    <section id="view-letter" class="view">
+      <div class="card letter-card">
+        <div class="wax-seal">💌</div>
+        <div class="letter-badge">Charobidy baeko · Pacte d'Amour</div>
+
+        <h2 class="letter-heading">C'est officiel, c'est un rendez-vous !</h2>
+        <div class="letter-date" id="letter-datetime-display">Le --/--/---- à --:--</div>
+
+        <div class="letter-body">
+          <p class="letter-intro" id="letter-intro-text">
+            Chère <strong>Nacia</strong>, ton amoureux <strong>Charobidy</strong> est comblé de bonheur.
+          </p>
+
+          <div class="letter-plans-box">
+            <h3 class="plans-title">Au programme de notre doux tête-à-tête :</h3>
+            <ul class="plans-list" id="letter-activities-list"></ul>
+          </div>
+
+          <div id="letter-note-box" class="letter-note-box" style="display: none;">
+            <em>« <span id="letter-note-text"></span> »</em>
+          </div>
+
+          <p class="letter-conclusion">
+            Prépare-toi à être choyée, aimée et regardée avec les yeux du cœur. Je t'aime infiniment baeko.
+          </p>
+        </div>
+
+        <div class="letter-actions">
+          <button type="button" id="btn-go-dashboard" class="btn-secondary">
+            Voir le tableau de bord partagé 📊
+          </button>
+          <button type="button" id="btn-replan" class="btn-outline">
+            Planifier un autre date ✨
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TABLEAU DE BORD PARTAGÉ (SYNCHRONISÉ) -->
+    <section id="view-dashboard" class="view">
+      <div class="card dashboard-card">
+        <div class="dash-header">
+          <div>
+            <div class="sync-indicator">
+              <span class="live-dot"></span>
+              Synchronisé en temps réel avec le serveur
+            </div>
+            <h2 class="card-title">Tableau de Bord du Couple</h2>
+            <p class="subtitle">Tous nos rendez-vous enregistrés et visibles sur nos deux téléphones.</p>
+          </div>
+
+          <div class="dash-tools">
+            <button type="button" id="btn-sync-now" class="btn-tool" title="Actualiser les données">
+              🔄 Actualiser
+            </button>
+            <button type="button" id="btn-clear-all" class="btn-tool danger" title="Effacer tous les plans">
+              🗑️ Tout effacer
+            </button>
+          </div>
+        </div>
+
+        <!-- Filtre -->
+        <div class="filter-bar">
+          <span>Filtrer par personne :</span>
+          <div class="filter-buttons">
+            <button type="button" class="filter-btn active" data-filter="all">Tous</button>
+            <button type="button" class="filter-btn" data-filter="Nacia">Nacia</button>
+            <button type="button" class="filter-btn" data-filter="Charobidy">Charobidy</button>
+          </div>
+        </div>
+
+        <!-- Liste des rendez-vous -->
+        <div id="plans-container" class="plans-container">
+          <!-- Injecté dynamiquement par JavaScript -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

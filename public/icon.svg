@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fda4af" />
+      <stop offset="45%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#881337" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle / Android adaptive shape -->
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+
+  <!-- Inner delicate ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="4" stroke-dasharray="8 8" />
+
+  <!-- Heart shape -->
+  <g filter="url(#shadow)">
+    <path d="M256 420 C256 420, 100 310, 100 200 C100 135, 150 95, 210 95 C240 95, 250 110, 256 125 C262 110, 272 95, 302 95 C362 95, 412 135, 412 200 C412 310, 256 420, 256 420 Z" 
+          fill="#ffffff" />
+    <path d="M256 385 C256 385, 125 292, 125 198 C125 145, 165 115, 212 115 C238 115, 248 128, 256 140 C264 128, 274 115, 300 115 C347 115, 387 145, 387 198 C387 292, 256 385, 256 385 Z" 
+          fill="#ffe4e6" />
+  </g>
+
+  <!-- Text / Initials CN -->
+  <text x="256" y="240" font-family="'Playfair Display', Georgia, serif" font-size="78" font-weight="bold" fill="#e11d48" text-anchor="middle" letter-spacing="2">
+    C &amp; N
+  </text>
+  <text x="256" y="280" font-family="'Caveat', cursive, sans-serif" font-size="34" font-weight="bold" fill="#9f1239" text-anchor="middle">
+    baeko
+  </text>
+
+  <!-- Gold decorative sparkles -->
+  <polygon points="380,105 388,125 408,133 388,141 380,161 372,141 352,133 372,125" fill="url(#gold)" />
+  <polygon points="120,330 126,345 141,351 126,357 120,372 114,357 99,351 114,345" fill="url(#gold)" />
+</svg>

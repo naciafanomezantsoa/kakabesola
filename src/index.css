@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-serif-soft {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom romantic subtle pattern */
+.bg-romantic-grid {
+  background-image: radial-gradient(rgba(244, 114, 182, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-letter-texture {
+  background-color: #fffefb;
+  background-image: 
+    radial-gradient(#f7efe5 0.75px, transparent 0.75px),
+    radial-gradient(#f7efe5 0.75px, #fffefb 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(0) scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120px) scale(1.1) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.animate-float-heart {
+  animation: float-heart 3.5s ease-in-out infinite;
+}
